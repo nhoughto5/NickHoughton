@@ -24,7 +24,9 @@ header,
 main {
 	//padding: 0 20px;
 }
-
+.hidden{
+	display: none;
+}
 /*** wrapper div for both header and main ***/
 .wrapper {
 	padding: 20px;

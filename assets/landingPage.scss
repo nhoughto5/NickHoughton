@@ -3,7 +3,7 @@
 ---
 $backGround: #71a4ec;
 $backGround2: #c4dff3;
-
+$text-color: #46433A;
 canvas{
   position: fixed;
   top: 0;
@@ -18,6 +18,71 @@ canvas{
     background: -o-linear-gradient(0deg, $backGround, $backGround2); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(0deg, $backGround, $backGround2); /* For Firefox 3.6 to 15 */
     background: linear-gradient(0deg, $backGround, $backGround2); /* Standard syntax (must be last) */
+  }
+}
 
+$iconShift: 5%;
+.contact{
+  text-align: center;
+
+  .contactLabel{
+    text-align: center;
+  }
+
+  h3{
+    display: inline-block;
+    padding: 0 3% 0 3%;
+    font-size: 1.5em;
+    &.github:before{
+      content: '\f09b';
+      position: relative;
+      right: $iconShift;
+    }
+
+    &.email:before{
+      content: '\f1fa';
+      position: relative;
+      right: $iconShift;
+    }
+    &.linkedIn:before{
+      content: '\f0e1';
+      position: relative;
+      right: $iconShift;
+    }
+    a{
+      margin-left: 5%;
+    }
+  }
+}
+
+ul{
+  padding-left: 20%;
+  padding-right: 20%;
+  list-style:none;
+  .li{
+    padding-right: 10px;
+  }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: $text-color;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 60px;
+    left: -20px;
+    //visibility: visible;
+  }
+  &:hover .tooltiptext {
+    visibility: visible;
   }
 }

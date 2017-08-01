@@ -2,13 +2,16 @@
 * Created by nickhoughton on 6/20/17.
 */
 
-var game, size;
+var game, size, homePage = true;
 var clouds = [], numClouds = 5, sun;
 var numCloudImages = 9;
+const fadeInDuration = 3000, fadeOutDuration = 3000;
 function main() {
   game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.CANVAS, 'body', null, true);
   game.state.add('mainState', mainState);
   game.state.start('mainState');
+  initNavButtons();
+  //$('#wrapper').fadeIn(fadeInDuration).removeClass('hidden');
 }
 
 function addCloud(i, n){
@@ -73,6 +76,22 @@ var mainState = {
       sun.body.velocity.x = randomFloat(45, 60, 0);
       sun.body.velocity.y = randomFloat(-7, 7, 0);
     }
+  }
+}
+function initNavButtons(){
+  let homeBtn = document.getElementById("homeBtn");
+  let contactBtn = document.getElementById("contactBtn")
+
+  if(homeBtn && contactBtn){
+    contactBtn.addEventListener('click', function(){
+      $('#wrapper').fadeOut(fadeOutDuration);
+      $('#contact').delay(fadeOutDuration).fadeIn(fadeInDuration);
+    });
+
+    homeBtn.addEventListener('click', function(){
+      $('#contact').fadeOut(fadeOutDuration);
+      $('#wrapper').delay(fadeOutDuration).fadeIn(fadeInDuration);
+    });
   }
 }
 

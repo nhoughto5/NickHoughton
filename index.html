@@ -28,15 +28,22 @@ layout: base
     </main>
     <hr>
 
-    <div class="section group">
-        <div class="col span_4_of_12"></div>
-        <div class="col span_1_of_12 noUnderline" style="text-align: center"><a href="https://github.com/nhoughto5" class="fa fa-github fa-3x"></a></div>
-        <div class="col span_1_of_12 noUnderline" style="text-align: center"><a onclick="toggleDayNight()" class="fa fa-envelope fa-3x"></a></div>
-        <div class="col span_1_of_12 noUnderline" style="text-align: center"><a href="/Portfolio" class="fa fa-folder-open fa-3x"></a></div>
-        <div class="col span_1_of_12 noUnderline" style="text-align: center"><a href="/public/Hootin" class="fa fa-music fa-3x"></a></div>
-        <div class="col span_4_of_12"></div>
-    </div>
+    {% include navBtns.html %}
 </div>
+<div id="contact" class="wrapper contact hidden">
+    <h1 class="contactLabel">Contact</h1>
+    <br>
+    <div class="section group">
+        <div class="col span_4_of_12"><h3 class="github fa"><a href="https://github.com/nhoughto5/">Github</a></h3></div>
+        <div class="col span_4_of_12"><h3 class="email fa"><a href="mailto:nhoughto5@gmail.com?Subject=Contact%20from%20nickhoughton.ca">Email</a></h3></div>
+        <div class="col span_4_of_12"><h3 class="linkedIn fa"><a href="https://www.linkedin.com/in/nghoughton/">LinkedIn</a></h3></div>
+    </div>
+    <br>
+    <p>I would love to hear from you!</p>
+    <hr>
+    {% include navBtns.html %}
+</div>
+
 <script
         src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
         integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
