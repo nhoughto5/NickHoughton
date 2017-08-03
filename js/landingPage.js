@@ -5,13 +5,12 @@
 var game, size, homePage = true;
 var clouds = [], numClouds = 5, sun;
 var numCloudImages = 9;
-const fadeInDuration = 3000, fadeOutDuration = 3000;
+const fadeInDuration = 1500, fadeOutDuration = 3000;
 function main() {
   game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.CANVAS, 'body', null, true);
   game.state.add('mainState', mainState);
   game.state.start('mainState');
-  initNavButtons();
-  //$('#wrapper').fadeIn(fadeInDuration).removeClass('hidden');
+  //initNavButtons();
 }
 
 function addCloud(i, n){
@@ -78,21 +77,24 @@ var mainState = {
     }
   }
 }
+
 function initNavButtons(){
-  let homeBtn = document.getElementById("homeBtn");
-  let contactBtn = document.getElementById("contactBtn")
+  $('#homeBtn').click({caller: 'home'}, toggleContactPage);
+  $('#contactBtn').click({caller: 'contact'}, toggleContactPage);
+}
 
-  if(homeBtn && contactBtn){
-    contactBtn.addEventListener('click', function(){
-      $('#wrapper').fadeOut(fadeOutDuration);
-      $('#contact').delay(fadeOutDuration).fadeIn(fadeInDuration);
-    });
-
-    homeBtn.addEventListener('click', function(){
-      $('#contact').fadeOut(fadeOutDuration);
-      $('#wrapper').delay(fadeOutDuration).fadeIn(fadeInDuration);
-    });
+function toggleContactPage(caller){
+  if(homePage && caller === 'contact'){
+    $('#wrapper').fadeOut(fadeOutDuration);
+    $('#contact').delay(fadeOutDuration).fadeIn(fadeInDuration);
+    //initNavButtons();
   }
+  if(!homePage && caller === 'home'){
+    $('#contact').fadeOut(fadeOutDuration);
+    $('#wrapper').delay(fadeOutDuration).fadeIn(fadeInDuration);
+    //initNavButtons();
+  }
+  homePage = !homePage;
 }
 
 window.onload = main;
