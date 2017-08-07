@@ -1,29 +1,29 @@
 ---
-  # Comment
+# Comment
 ---
 
-.blogPage {
-  .title {
-    text-align: center;
-    font-size: 2.25em;
-    border-bottom: 1px solid #343738;
-  }
-
-  .blogContent {
-    list-style-type: none;
-    .postTitle {
-      color: red;
+  .blogPage {
+    .title {
+      text-align: center;
+      font-size: 2.25em;
+      border-bottom: 1px solid #343738;
     }
-  }
 
-  .blogNav {
-    text-align: center;
-    .blogNavCategory {
-      display: inline-block;
-      text-transform: uppercase;
+    .blogContent {
       list-style-type: none;
-      padding-left: 15px;
-      padding-right: 15px;
+      .postTitle {
+        color: red;
+      }
+    }
+
+    .blogNav {
+      text-align: center;
+      .blogNavCategory {
+        display: inline-block;
+        text-transform: uppercase;
+        list-style-type: none;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
     }
   }
-}
