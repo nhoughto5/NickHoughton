@@ -1,0 +1,21 @@
+---
+layout: Day
+---
+<div class="wrapper blogPage">
+    <h1 class="title">Blog</h1>
+        <ul class="blogNav">
+            {% for category in site.categories %}
+            <li class="blogNavCategory">
+                <a href="/{{ category | first | strip_html }}">{{ category | first | strip_html }} </a>
+            </li>
+            {% endfor %}
+            <li class="blogNavCategory">
+                <a href="/Blog">All</a>
+            </li>
+        </ul>
+
+        <div class="blogContent">
+            {{ content }}
+        </div>
+
+</div>
