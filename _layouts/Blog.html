@@ -6,7 +6,7 @@ layout: Day
         <ul class="blogNav">
             {% for category in site.categories %}
             <li class="blogNavCategory">
-                <a href="/{{ category | first | strip_html }}">{{ category | first | strip_html }} </a>
+                <a href="/Categories/{{ category | first | strip_html }}">{{ category | first | strip_html }} </a>
             </li>
             {% endfor %}
             <li class="blogNavCategory">
