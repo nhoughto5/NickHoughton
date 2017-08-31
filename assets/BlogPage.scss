@@ -1,29 +1,52 @@
 ---
 # Comment
 ---
+$text-color: #46433A;
+$anchor-text-color: #CE534D;
+$background-color: #F1EED9;
 
-  .blogPage {
-    .title {
+.Post{
+  padding: 25%;
+  .postContent{
+    padding: 1%;
+    background-color: rgba(220, 219, 217, 0.5);
+    .title{
       text-align: center;
-      font-size: 2.25em;
-      border-bottom: 1px solid #343738;
+      text-decoration: underline;
     }
-
-    .blogContent {
-      list-style-type: none;
-      .postTitle {
-        color: red;
-      }
-    }
-
-    .blogNav {
-      text-align: center;
-      .blogNavCategory {
-        display: inline-block;
-        text-transform: uppercase;
-        list-style-type: none;
-        padding-left: 15px;
-        padding-right: 15px;
-      }
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+      //color: $anchor-text-color;
+      color: $anchor-text-color;
+      text-decoration: none;
     }
   }
+}
+
+.blogPage {
+  .title {
+    text-align: center;
+    font-size: 2.25em;
+    border-bottom: 1px solid #343738;
+  }
+
+  .blogContent {
+    list-style-type: none;
+    .postTitle {
+      color: red;
+    }
+  }
+
+  .blogNav {
+    text-align: center;
+    .blogNavCategory {
+      display: inline-block;
+      text-transform: uppercase;
+      list-style-type: none;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
