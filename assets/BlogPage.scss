@@ -23,6 +23,11 @@ $background-color: #F1EED9;
       text-decoration: none;
     }
   }
+  code{
+    color:red;
+    font-size: 0.8em;
+    font-style: oblique;
+  }
 }
 
 .blogPage {
@@ -49,4 +54,5 @@ $background-color: #F1EED9;
       padding-right: 15px;
     }
   }
+
 }
