@@ -3,7 +3,7 @@
 */
 
 var game, size, homePage = true;
-var clouds = [], numClouds = 5, sun;
+var clouds = new Array(), numClouds = 5, sun;
 var numCloudImages = 9;
 const fadeInDuration = 1500, fadeOutDuration = 3000;
 function main() {
@@ -13,16 +13,17 @@ function main() {
   //initNavButtons();
 }
 
-function addCloud(i, n){
+function addCloud(cacheKey){
   var sx = randomFloat(0.1, 0.4, 2);
-  clouds[i] = game.add.sprite(0, 0, 'cloud' + n);
-  clouds[i].position.y = randomFloat(0, game.height, 0);
-  clouds[i].position.x = randomFloat(-game.width, game.width, 0);
-  game.physics.enable(clouds[i], Phaser.Physics.ARCADE);
-  clouds[i].body.velocity.x = randomFloat(45, 55, 0);
-  clouds[i].body.velocity.y = randomFloat(-5, 5, 0);
-  clouds[i].scale.setTo(sx, sx);
-  clouds[i].anchor.setTo(0.5,0.5);
+  var cloud = game.add.sprite(0, 0, cacheKey);
+  cloud.position.y = randomFloat(0, game.height, 0);
+  cloud.position.x = randomFloat(-game.width, game.width, 0);
+  game.physics.enable(cloud, Phaser.Physics.ARCADE);
+  cloud.body.velocity.x = randomFloat(45, 55, 0);
+  cloud.body.velocity.y = randomFloat(-5, 5, 0);
+  cloud.scale.setTo(sx, sx);
+  cloud.anchor.setTo(0.5,0.5);
+  clouds.push(cloud);
 }
 
 function addSun(){
@@ -44,6 +45,7 @@ var mainState = {
     });
     game.stage.disableVisibilityChange = true;
     game.canvas.className += "day";
+    game.load.onFileComplete.add(fileComplete, this);
     for(let i = 1; i <= numCloudImages; ++i){
       let n = 'cloud' + i;
       game.load.image(n, '/images/' + n + '.png');
@@ -52,12 +54,9 @@ var mainState = {
 
   },
   create: function(){
-    addSun();
-    for(let i = 0; i < numClouds; ++i){
-      addCloud(i, randomFloat(1, numCloudImages, 0));
-    }
 
   },
+
   update:function(){
     sun.angle += 0.1;
     for(let i = 0; i < numClouds; ++i){
@@ -75,6 +74,14 @@ var mainState = {
       sun.body.velocity.x = randomFloat(45, 60, 0);
       sun.body.velocity.y = randomFloat(-7, 7, 0);
     }
+  }
+}
+
+function fileComplete(progress, cacheKey, success, totalLoaded, totalFiles){
+  if(cacheKey === 'sun'){
+    addSun();
+  }else{
+    addCloud(cacheKey);
   }
 }
 
