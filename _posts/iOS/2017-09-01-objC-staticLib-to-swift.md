@@ -1,6 +1,6 @@
 ---
 layout: Day
-title: Converting an Obj-C Static Library to Swift
+title: Converting an Objective-C Static Library to Swift
 category: iOS
 meta: Going from old to new with minimal hair loss
 layout: Post
