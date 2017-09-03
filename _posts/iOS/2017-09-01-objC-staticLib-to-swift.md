@@ -59,7 +59,7 @@ Here you can make it public.
 The framework project comes with a header file of the same name by default.
 Now, all you have to do is import your Objective-C header files here.
 
-#### Voilla!
+### Voila!
 
 Press build and you have a framework which can run all of your old Objective-C code AND new your new Swift code side by side. 
 You can now progressively begin to translate your Objective-C to Swift without totally destroying the applications which use it!

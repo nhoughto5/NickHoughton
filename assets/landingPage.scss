@@ -27,12 +27,22 @@ $iconShift: 5%;
 
   .contactLabel{
     text-align: center;
+    font-size: 300%;
+  }
+  .contactLabel:after {
+    display: block;
+    height: 2px;
+    background-color: $text-color;
+    content: "";
+    width: 100px;
+    margin: 20px auto;
   }
 
-  h3{
+  h4{
     display: inline-block;
+    margin-top: 10px;
     padding: 0 3% 0 3%;
-    font-size: 1.5em;
+    font-size: 1.2em;
     &.github:before{
       content: '\f09b';
       position: relative;
@@ -62,6 +72,10 @@ ul{
   .li{
     padding-right: 10px;
   }
+}
+
+.contact-icon.fa {
+  font-size: 300%;
 }
 
 .tooltip {

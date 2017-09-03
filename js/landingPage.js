@@ -17,7 +17,7 @@ function addCloud(cacheKey){
   var sx = randomFloat(0.1, 0.4, 2);
   var cloud = game.add.sprite(0, 0, cacheKey);
   cloud.position.y = randomFloat(0, game.height, 0);
-  cloud.position.x = randomFloat(-game.width, game.width, 0);
+  cloud.position.x = randomFloat(-game.width, 0, 0);
   game.physics.enable(cloud, Phaser.Physics.ARCADE);
   cloud.body.velocity.x = randomFloat(45, 55, 0);
   cloud.body.velocity.y = randomFloat(-5, 5, 0);
