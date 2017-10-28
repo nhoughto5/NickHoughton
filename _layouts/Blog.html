@@ -1,7 +1,11 @@
 ---
 layout: Day
 ---
+
 <div class="wrapper blogPage">
+    <div class="post-header">
+        <p class="post-navlink"><a href="/"><i class="fa fa-home"></i>&nbsp;Home page</a></p>
+    </div>
     <h1 class="title">Blog</h1>
         <ul class="blogNav">
             {% for category in site.categories %}
@@ -13,6 +17,7 @@ layout: Day
                 <a href="/Blog">All</a>
             </li>
         </ul>
+        <hr>
 
         <div class="blogContent">
             {{ content }}

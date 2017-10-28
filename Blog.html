@@ -2,11 +2,14 @@
 layout: Blog
 ---
 {% for post in site.posts %}
-
 <li>
-    <h2>
+    <div class="date">
+        <p>{{ post.date | date_to_long_string }}</p>
+    </div>
+    <h2 style="">
         <a class="postTitle" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
     </h2>
+
     <p>{{ post.meta }}</p>
 </li>
 

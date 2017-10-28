@@ -3,7 +3,7 @@ layout: Day
 title: Dead Earth
 category: unity
 meta: An excellent Unity 5 course project
-layout: Post
+published: false
 ---
 
 For those who are yet to come across [Udemy](https://www.udemy.com/), it is one of, if not, the greatest online education website out there. In particular, their technical courses are many; most are excellent. I was keen to get some in depth experience with [Unity 5](https://unity3d.com/) so I went shopping. 

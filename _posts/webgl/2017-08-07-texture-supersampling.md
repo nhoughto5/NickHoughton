@@ -1,5 +1,4 @@
 ---
-layout: Day
 title: WebGL Anti-Aliasing & Mip Maps
 category: webgl
 meta: An old method for improving texture resolution

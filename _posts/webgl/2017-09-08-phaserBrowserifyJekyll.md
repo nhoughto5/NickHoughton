@@ -1,9 +1,9 @@
 ---
-layout: Day
 title: Combining Jekyll, Phaser and Browserify
 category: webgl
 meta: An old method for improving texture resolution
 layout: Post
+published: false
 ---
 1. Create new Jekyll Blog
 2. npm init

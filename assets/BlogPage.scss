@@ -39,15 +39,16 @@ $background-color: #F1EED9;
     }
     .post-content-body {
       padding-top: 20px;
+      a:link,
+      a:visited,
+      a:hover,
+      a:active {
+        //color: $anchor-text-color;
+        color: $anchor-text-color;
+        text-decoration: none;
+      }
     }
-    //a:link,
-    //a:visited,
-    //a:hover,
-    //a:active {
-    //  //color: $anchor-text-color;
-    //  color: $anchor-text-color;
-    //  text-decoration: none;
-    //}
+
   }
   @media screen and (max-width: 699px) {
     .postContent {
@@ -92,6 +93,9 @@ $background-color: #F1EED9;
       padding-right: 15px;
     }
   }
-
+  .date{
+    text-decoration: underline;
+    text-align: center;
+  }
 }
 
