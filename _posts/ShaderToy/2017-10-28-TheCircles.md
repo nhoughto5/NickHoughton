@@ -40,11 +40,11 @@ Sixteen lines is all it takes, and I'm sure someone could [code golf](https://en
 
     void mainImage( out vec4 fragColor, in vec2 fragCoord )
     {
-    	vec2 uv = fragCoord.xy; // Get the xy pos of the pixel
+        vec2 uv = fragCoord.xy; // Get the xy pos of the pixel
 
-    	// Choose the two colors to use
-    	vec4 backGround = vec4(0.9, 0.8, 0.7, 1.0);
-    	vec3 shapeColor = vec3(0.3, 0.73, 0.14);
+        // Choose the two colors to use
+        vec4 backGround = vec4(0.9, 0.8, 0.7, 1.0);
+        vec3 shapeColor = vec3(0.3, 0.73, 0.14);
 
         vec2 center = iResolution.xy * 0.5;
         float radius = iResolution.y * 0.25;
