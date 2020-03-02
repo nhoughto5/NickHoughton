@@ -1,6 +1,9 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
+import { Button } from "react-bootstrap";
 import styled from "styled-components";
 import bgImage from "../../images/background.jpg";
+import Header from "../components/Header";
 
 const Background = styled.div`
     background-image: url(${bgImage});
@@ -19,6 +22,8 @@ class IndexPage extends React.Component {
     render() {
         return (
             <div id="app">
+                <Header></Header>
+                <Button bsStyle="primary">Learn more</Button>
                 <Background />
             </div>
         );
