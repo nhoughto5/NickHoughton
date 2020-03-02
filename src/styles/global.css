@@ -1,0 +1,6 @@
+body,
+html,
+#app {
+    height: 100vh;
+    margin: 0;
+}

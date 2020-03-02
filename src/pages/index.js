@@ -1,5 +1,14 @@
 import React from "react";
-import Header from "../components/Header";
+import styled from "styled-components";
+import bgImage from "../../images/background.jpg";
+
+const Background = styled.div`
+    background-image: url(${bgImage});
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+`;
 
 class IndexPage extends React.Component {
     constructor(props) {
@@ -9,9 +18,8 @@ class IndexPage extends React.Component {
 
     render() {
         return (
-            <div>
-                <Header />
-                <div>Dick</div>
+            <div id="app">
+                <Background />
             </div>
         );
     }

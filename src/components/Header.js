@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import Constants from "../Constants";
 
 const Test = styled.div`
-    color: red;
+    color: ${Constants.BLUE};
 `;
 
 class Header extends React.Component {
