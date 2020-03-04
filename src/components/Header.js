@@ -1,19 +1,6 @@
 import React from "react";
-import {
-    Button,
-    Form,
-    FormControl,
-    Nav,
-    Navbar,
-    NavDropdown,
-} from "react-bootstrap";
-import styled from "styled-components";
-import Constants from "../Constants";
-
-const Test = styled.div`
-    color: ${Constants.BLUE};
-`;
-
+import { Nav, Navbar, NavDropdown } from "react-bootstrap";
+import cowboy from "../../images/cowboy.png";
 class Header extends React.Component {
     constructor(props) {
         super(props);
@@ -22,15 +9,33 @@ class Header extends React.Component {
 
     render() {
         return (
-            <Navbar>
-                <Navbar.Brand href="#home">Menu</Navbar.Brand>
+            <Navbar bg="dark" variant="dark">
+                <Navbar.Brand href="#home">
+                    <img
+                        alt=""
+                        src={cowboy}
+                        width="17"
+                        height="30"
+                        className="d-inline-block align-top"
+                    />
+                    &nbsp;&nbsp;Nick Houghton
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         <Nav.Link href="#home">Home</Nav.Link>
                         <Nav.Link href="#link">Link</Nav.Link>
-                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">
+                        <NavDropdown
+                            bg="dark"
+                            variant="dark"
+                            title="Dropdown"
+                            id="basic-nav-dropdown"
+                        >
+                            <NavDropdown.Item
+                                bg="dark"
+                                variant="dark"
+                                href="#action/3.1"
+                            >
                                 Action
                             </NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">
@@ -45,14 +50,14 @@ class Header extends React.Component {
                             </NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
-                    <Form inline>
+                    {/* <Form inline>
                         <FormControl
                             type="text"
                             placeholder="Search"
                             className="mr-sm-2"
                         />
                         <Button variant="outline-success">Search</Button>
-                    </Form>
+                    </Form> */}
                 </Navbar.Collapse>
             </Navbar>
         );
