@@ -1,3 +1,43 @@
 .inverse {
     color: green;
+    background-color: red;
+    border-color: purple;
+}
+
+.container {
+    margin-top: 10vh;
+    margin-right: 0;
+    margin-left: 0;
+    width: 100vw;
+}
+
+.rowStyle {
+    width: 100vw;
+}
+
+.column {
+    background-color: red;
+    height: 70vh;
+    border-style: groove;
+}
+
+.colAlt {
+    @extend .column;
+    background-color: green;
+}
+
+.scaling-svg-container {
+    position: relative;
+    height: 0;
+    width: 100%;
+    padding: 0;
+    padding-bottom: 100%;
+    /* override this inline for aspect ratio other than square */
+}
+.scaling-svg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
 }

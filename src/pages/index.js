@@ -28,7 +28,6 @@ class IndexPage extends React.Component {
                 <Background>
                     <Header></Header>
                     <HomeView></HomeView>
-                    <div className="inverse">FUCK</div>
                 </Background>
             </div>
         );

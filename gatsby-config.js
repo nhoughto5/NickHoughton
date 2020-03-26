@@ -13,8 +13,10 @@ module.exports = {
         "gatsby-plugin-sass",
         {
             resolve: `gatsby-plugin-styled-components`,
+            resolve: "gatsby-plugin-react-svg",
             options: {
                 // Add any options here
+                include: /svg/,
             },
         },
     ],

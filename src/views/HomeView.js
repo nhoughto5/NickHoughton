@@ -1,5 +1,6 @@
 import React from "react";
-import { Button, ButtonToolbar } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
+import DesignColumn from "../components/DesignColumn";
 import "../styles/styles.scss";
 
 class HomeView extends React.Component {
@@ -10,19 +11,14 @@ class HomeView extends React.Component {
 
     render() {
         return (
-            <ButtonToolbar>
-                <Button variant="primary" className="inverse">
-                    Primary
-                </Button>
-                <Button variant="secondary">Secondary</Button>
-                <Button variant="success">Success</Button>
-                <Button variant="warning">Warning</Button>
-                <Button variant="danger">Danger</Button>
-                <Button variant="info">Info</Button>
-                <Button variant="light">Light</Button>
-                <Button variant="dark">Dark</Button>
-                <Button variant="link">Link</Button>
-            </ButtonToolbar>
+            <Container className="container">
+                <Row className="rowStyle">
+                    <DesignColumn></DesignColumn>
+                    <Col className="column colAlt">Development</Col>
+                    <Col className="column">Deployment</Col>
+                    <Col className="colAlt">Software Management</Col>
+                </Row>
+            </Container>
         );
     }
 }
