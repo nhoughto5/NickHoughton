@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Star from "../../../svg/star.svg";
+import OfficeAnim from "../svg/officeChairAnim.svg";
 
 class OfficeChair extends Component {
     render() {
@@ -12,7 +12,7 @@ class OfficeChair extends Component {
                     alignContent: "center",
                 }}
             >
-                <Star></Star>
+                <OfficeAnim></OfficeAnim>
             </div>
         );
     }
