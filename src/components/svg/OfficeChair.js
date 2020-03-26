@@ -7,8 +7,8 @@ class OfficeChair extends Component {
             <div
                 className="size"
                 style={{
-                    height: "100%",
-                    width: "100%",
+                    height: "80%",
+                    width: "80%",
                     alignContent: "center",
                 }}
             >
